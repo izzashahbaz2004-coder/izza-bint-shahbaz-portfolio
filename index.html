@@ -1,0 +1,469 @@
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Izza – SQA Engineer Portfolio</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237A5A50%22/><text y=%22.85em%22 x=%2250%%22 font-family=%22serif%22 font-weight=%22bold%22 font-size=%2280%22 text-anchor=%22middle%22 fill=%22white%22>I</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,500;1,300&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-content">
+    <img src="images/izza portfolio loading page .gif" alt="Izza Loading" class="loader-gif">
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Scroll Progress -->
+<div id="progress-bar"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+ <a href="#" class="nav-logo">
+  <img src="images/Elegant_monogram_with_copper_accents-removebg-preview.png" alt="Izza Logo">
+</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#process">WorkFlow</a></li>
+   <li><a href="#contact" class="nav-contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" role="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#process" class="mobile-link">Process</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- Hero -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-badge">✦ Software Quality Assurance Engineer</div>
+    <h1 class="hero-name">
+      Hello, I'm<br><em>Izza Shahbaz.</em>
+    </h1>
+    <p class="hero-tagline">
+      Delivering reliable software through precision, structured testing methodologies,  and an unwavering commitment to quality excellence.<br>
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects →</a>
+      
+    </div>
+  </div>
+ 
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="section-eyebrow">About Me</div>
+  <h2 class="section-title">Passionate about <em>quality</em><br>in every build</h2>
+  <div class="about-grid">
+    <div class="about-visual reveal-left">
+      <div class="about-img-decor"></div>
+      <div class="about-img-wrap">
+        <div class="about-initials">
+          <div class="big-i">I</div>
+          <div class="sub">SQA Engineer</div>
+        </div>
+      </div>
+      <div class="about-blob"></div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Test Cases Written</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Bugs Reported</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Projects Tested</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Test Coverage</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content reveal-right">
+      <p>I am a <strong>detail-oriented Software Quality Assurance Engineer</strong> with a strong passion for ensuring software products meet the highest standards of reliability, functionality, and user experience.</p>
+      <p>My approach to QA goes beyond simply finding bugs — I believe in building <strong>robust testing strategies</strong> from the ground up, collaborating closely with development teams, and advocating for quality at every stage of the software development lifecycle.</p>
+      <p>With expertise in both <strong>manual testing methodologies</strong> and exposure to basic automation tools, I bring a comprehensive perspective to quality engineering.</p>
+      <ul class="trait-list">
+        <li><span class="trait-dot"></span>Analytical thinker with a structured approach to problem-solving</li>
+        <li><span class="trait-dot"></span>Strong communicator for cross-functional team collaboration</li>
+        <li><span class="trait-dot"></span>Dedicated advocate for quality-first development culture</li>
+        <li><span class="trait-dot"></span>Continuously learning modern testing practices and tools</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2 class="section-title reveal">Skills <em>& </em>Expertise</h2>
+  <div class="skills-grid">
+    
+    <div class="skill-category reveal" style="transition-delay:0.1s">
+      <div class="skill-cat-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+      <div class="skill-cat-title">Manual Testing</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Test Case Design</span>
+        <span class="skill-tag">Test Planning</span>
+        <span class="skill-tag">Regression Testing</span>
+        <span class="skill-tag">Smoke Testing</span>
+        <span class="skill-tag">Sanity Testing</span>
+        <span class="skill-tag">Bug Reporting</span>
+        <span class="skill-tag">Exploratory Testing</span>
+      </div>
+    </div>
+
+   
+
+    <div class="skill-category reveal" style="transition-delay:0.3s">
+      <div class="skill-cat-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <div class="skill-cat-title">Tools & Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag">JIRA</span>
+        <span class="skill-tag">Postman</span>
+        <span class="skill-tag">Asana</span>
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">Monday</span>
+        <span class="skill-tag">Buzgilla</span>
+      </div>
+    </div>
+
+    <div class="skill-category reveal" style="transition-delay:0.4s">
+      <div class="skill-cat-icon"><i class="fa-solid fa-code"></i></div>
+      <div class="skill-cat-title">Technical Knowledge</div>
+      <div class="skill-tags">
+        <span class="skill-tag">API Testing</span>
+        <span class="skill-tag">SDLC</span>
+        <span class="skill-tag">STLC</span>
+        <span class="skill-tag">Basic JavaScript</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">JSON</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+   
+  <h2 class="section-title reveal">Featured <em>projects</em></h2>
+  <div class="projects-grid">
+
+    <div class="project-card reveal" style="transition-delay:0.1s" data-modal="1">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#FDE8D8,#EEC9A3)">
+        <div class="project-thumb-inner">
+          <img src="images/codingpixel-removebg-preview.png" alt="Coding Pixel" class="project-img">
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-role">QA Engineer</div>
+        <div class="project-name">Coding Pixel</div>
+        <div class="project-desc">Coding Pixel is a software development company that builds custom websites, mobile apps, and digital solutions for businesses.</div>
+        <div class="project-tools"></div>
+        <a href="https://codingpixel.com/" target="_blank" class="project-button">
+           View Project →
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.2s" data-modal="2">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#E8D5C4,#C4A882)">
+        <div class="project-thumb-inner">
+          <img src="images/veritasclaim-removebg-preview.png" alt="Veritas Claims" class="project-img">
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-role">QA Engineer</div>
+        <div class="project-name">Veritasclaims</div>
+        <div class="project-desc">Veritas Claims is a national claims management company specializing in handling heavy equipment, trucking, and insurance claims for businesses.</div>
+        <div class="project-tools"></div>
+        <a href="https://www.veritasclaims.com/" target="_blank" class="project-button">
+           View Project →
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.3s" data-modal="3">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#D4C5B0,#B8956A)">
+        <div class="project-thumb-inner">
+          <img src="images/takeup.ai-removebg-preview.png" alt="Takeup.ai" class="project-img">
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-role">QA Engineer</div>
+        <div class="project-name">Takeup.ai</div>
+        <div class="project-desc">TakeUp is an AI-powered revenue management platform that helps independent hotels optimize pricing and increase revenue using real-time demand data.</div>
+        <div class="project-tools"></div>
+        <a href="https://takeup.ai/" target="_blank" class="project-button">
+           View Project →
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.4s" data-modal="4">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#C8B8A4,#A07855)">
+        <div class="project-thumb-inner">
+          <img src="images/complete_climate_services-removebg-preview.png" alt="Complete Climate Services" class="project-img">
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-role">QA Engineer</div>
+        <div class="project-name">Complete Climate Services</div>
+        <div class="project-desc">Complete Climate Services is an HVAC company that provides heating, cooling, installation, repair, and maintenance services for homes and businesses.</div>
+        <div class="project-tools"></div>
+        <a href="https://www.completeclimateservices.com/" target="_blank" class="project-button">
+           View Project →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-badge" id="modal-badge"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-desc" id="modal-desc"></div>
+    <div class="modal-section-label">Testing Types</div>
+    <div class="modal-tags" id="modal-testing"></div>
+    <div class="modal-section-label">Tools Used</div>
+    <div class="modal-tags" id="modal-tools"></div>
+  </div>
+</div>
+
+<!-- Experience -->
+<section id="experience">
+ 
+  <h2 class="section-title reveal">Professional <em>journey</em></h2>
+  <div class="exp-timeline">
+     
+
+    <div class="exp-item reveal">
+      <div class="exp-date">2026<br>Present</div>
+      <div class="exp-dot"></div>
+      <div class="exp-content">
+        <div class="exp-company">Salaar Technology Pvt.Ltd</div>
+        <div class="exp-role">QA Engineer</div>
+        <ul class="exp-list">
+          <li>Test Strategy Design, Functional Testing, Regression Testing, Integration Testing</li>
+          <li>eCommerce Testing, API Testing, Payment Gateway Validation, Workflow Testing</li>
+          <li>Defect Management, Bug Tracking, Developer Collaboration,Issue Resolution</li>
+          <li>QA Process Improvement, Test Optimization, Basic Test Automation</li>
+          <li>Prepared detailed test reports and weekly QA summaries for project stakeholders</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date">05/2024-08/2025</div>
+      <div class="exp-dot"></div>
+      <div class="exp-content">
+        <div class="exp-company">CODING PIXEL</div>
+        <div class="exp-role">QA Engineer</div>
+        <ul class="exp-list">
+          <li>Requirements Analysis, User Stories, Test Case Design, QA Task Breakdown</li>
+          <li>End-to-End Testing, WordPress QA, Test Planning, Test Execution, Defect Tracking, Regression Testing, Release Validation</li>
+          <li>eCommerce Testing, Shopify Testing, Product Listing Validation, Cart & Checkout Testing, Payment Gateway Testing</li>
+          <li>QA Documentation, Test Cases, Bug Reports, Software Requirement Specification (SRS)</li>
+          <li>UI/UX Testing, Usability Testing, Cross-Platform Testing (Web & Mobile)</li>
+          <li>Daily Stand-ups, Team Collaboration, Continuous Delivery</li>
+        </ul>
+      </div>
+      </div>
+</div>
+  <div class="exp-footer reveal">
+    <a href="c:\Users\artef\OneDrive\Desktop\IzzaShahbazResuume.pdf" download class="btn-primary">
+      <i class="fas fa-download" style="align-items: center;"></i>Download CV
+    </a>
+     </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QA Process -->
+<section id="process">
+ 
+  <h2 class="section-title">The QA <em>workflow</em></h2>
+
+  <div class="process-steps">
+
+    <div class="process-step reveal" style="transition-delay:0.05s">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+      <div class="step-title">Requirement Analysis</div>
+      <div class="step-desc">Understanding functional & non-functional requirements to define the scope of testing.</div>
+    </div>
+
+    <div class="process-step reveal" style="transition-delay:0.1s">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fas fa-map"></i></div>
+      <div class="step-title">Test Planning</div>
+      <div class="step-desc">Defining strategy, scope, resources, schedule and risk management.</div>
+    </div>
+
+    <div class="process-step reveal" style="transition-delay:0.15s">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fas fa-pen-nib"></i></div>
+      <div class="step-title">Test Case Design</div>
+      <div class="step-desc">Writing detailed, structured test cases covering all positive and negative scenarios.</div>
+    </div>
+
+    <div class="process-step reveal" style="transition-delay:0.2s">
+      <div class="step-num">04</div>
+      <div class="step-icon"><i class="fas fa-play"></i></div>
+      <div class="step-title">Execution</div>
+      <div class="step-desc">Running test cases systematically across all features and environments.</div>
+    </div>
+
+    <div class="process-step reveal" style="transition-delay:0.25s">
+      <div class="step-num">05</div>
+      <div class="step-icon"><i class="fas fa-bug"></i></div>
+      <div class="step-title">Bug Reporting</div>
+      <div class="step-desc">Logging clear, reproducible defects with priority classification in JIRA.</div>
+    </div>
+
+    <div class="process-step reveal" style="transition-delay:0.3s">
+      <div class="step-num">06</div>
+      <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+      <div class="step-title">Retesting & Sign-off</div>
+      <div class="step-desc">Verifying bug fixes, performing regression, and confirming quality sign-off.</div>
+    </div>
+
+  </div>
+</section>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+   
+  <h2 class="section-title reveal">Let's <em>connect</em></h2>
+  <div class="contact-grid">
+    <div class="reveal-left">
+     <h3 class="reveal-left" style="margin-bottom: 2rem; font-family: 'Times New Roman', Times, serif; color: sienna;">Open to opportunities &amp; collaboration</h3>
+      <p class="hero-description">
+  I specialize in ensuring software quality through manual and automated testing, 
+  delivering reliable and user-friendly digital experiences.
+</p>
+      
+      
+       <div class="contact-links">
+  
+  <a href="mailto:izzashahbaz2004@gmail.com" class="contact-link">
+    <div class="contact-link-icon">
+      <i class="fas fa-envelope"></i>
+    </div>
+    <div>
+      <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px">Email</div>
+      <div style="font-size:0.9rem;color:var(--primary)">izzashahbaz2004@gmail.com</div>
+    </div>
+  </a>
+
+  <a href="https://www.linkedin.com/in/izza-shahbaz-izzas098/" target="_blank" class="contact-link">
+    <div class="contact-link-icon">
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+    <div>
+      <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px">LinkedIn</div>
+      <div style="font-size:0.9rem;color:var(--primary)">linkedin.com/in/izza-shahbaz</div>
+    </div>
+  </a>
+
+  <a href="https://github.com/izzashahbaz2004-coder" target="_blank" class="contact-link">
+    <div class="contact-link-icon">
+      <i class="fab fa-github"></i>
+    </div>
+    <div>
+      <div style="font-size:0.7rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px">GitHub</div>
+      <div style="font-size:0.9rem;color:var(--primary)">github.com/izzashahbaz</div>
+    </div>
+  </a>
+
+</div>
+    </div>
+    <div class="reveal-right">
+      <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter Your Name" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter Your Email" required/>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject"/>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Enter Your Message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message ✦</button>
+        <div class="form-message" id="form-msg">✦ Thank you! Your message has been received. I'll be in touch shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+ 
+  <div class="footer-logo">Izza Bint E Shahbaz.</div>
+
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/izza-shahbaz-izzas098/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/izzashahbaz2004-coder" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="mailto:izzashahbaz2004@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+ 
+  </ul>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <span>© 2025 Izza. All rights reserved.</span>
+    <span>Software Quality Assurance Engineer</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="script.js"></script>
+ 
+</body>
+</html>
