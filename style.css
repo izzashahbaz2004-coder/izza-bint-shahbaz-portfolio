@@ -57,45 +57,60 @@ body.cursor-hover #cursor-ring { width: 50px; height: 50px; opacity: 0.3; }
   width: 0%; transition: width 0.1s linear;
 }
 
-/* ── Page Loader ── */
- /* ── Loader ── */
+/* ── Updated Loader Styles ── */
 #loader {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  
-  /* Replace with your exact page background color code */
-  background-color: #FDF2E6; 
-  
+  top: 0; 
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: #FDF2E6; /* Matches your brand cream background */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  margin: 0; 
+  padding: 0;
+  overflow: hidden; 
+}
+
+.loader-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .loader-gif {
-  width: 320px; /* Size remains proper */
+  /* INCREASED SIZE: From 450px to 800px for a bold impact */
+  width: 800px; 
   height: auto;
-  
-  /* ❌ Remove mix-blend-mode as it's not needed for transparent GIF */
-  /* mix-blend-mode: multiply; */ 
-  
+  /* SAFETY: Ensures the large logo still fits perfectly on mobile/tablets */
+  max-width: 95%; 
+  display: block;
   /* Optional: keeps the logo crisp */
-  filter: brightness(105%) contrast(110%);
-  animation: logoFade 1.5s ease-in-out infinite alternate;
+  image-rendering: -webkit-optimize-contrast;
+  
+  /* Applying the animation defined below */
+  animation: logoFade 2s ease-in-out infinite alternate;
 }
 
 @keyframes logoFade {
-  from { opacity: 0.8; transform: scale(0.95); }
+  /* Refined the scale to 1.05 to make the "breathing" effect more noticeable at large sizes */
+  from { opacity: 0.85; transform: scale(1); }
   to { opacity: 1; transform: scale(1.05); }
 }
 
-/* Class to hide loader (triggered by your script.js) */
+/* Logic to hide the loader */
 #loader.fade-out {
   opacity: 0;
   visibility: hidden;
 }
+
+
+
+
 /* ── Navbar ── */
 nav {
   position: fixed;
@@ -287,12 +302,25 @@ section { padding: 110px 7%; }
 }
 /* ── Mobile Screens ke liye ── */
 @media (max-width: 768px) {
+  nav {
+    /* Mobile par extra space dene ke liye */
+    padding: 15px 25px !important; 
+  }
+
+  .hamburger {
+    display: flex; /* Menu icon show karein */
+    /* Menu ke charo taraf thodi jagah banayein */
+    padding: 8px; 
+  }
+}
   .section-eyebrow {
     font-size: 2rem; /* Mobile par font chota ho jayega */
     margin-bottom: 10px;
     letter-spacing: 0.05em;
   }
-}
+
+
+
 
 
 /* This specifically targets the word 'About' */

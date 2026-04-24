@@ -1,9 +1,17 @@
 /* ── Loader ── */
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
-  loader.classList.add('fade-out');
+  
+  // SQA Fix: Added a 2.5-second delay to ensure the GIF animation 
+  // completes its full cycle before the page fades in.
+  setTimeout(() => {
+    if (loader) {
+      loader.classList.add('fade-out');
+      // Optional: Re-enable scrolling on the body once loaded
+      document.body.style.overflow = 'auto';
+    }
+  }, 2500); 
 });
-
  
 /* ── Custom Cursor ── */
 // We use 'window.' to check if it's already there to prevent the crash
