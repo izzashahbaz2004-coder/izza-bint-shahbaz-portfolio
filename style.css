@@ -58,12 +58,15 @@ body.cursor-hover #cursor-ring { width: 50px; height: 50px; opacity: 0.3; }
 }
 
 /* ── Page Loader ── */
-/* ── Updated Loader Styles ── */
+ /* ── Loader ── */
 #loader {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: #FDF2E6; /* Matches your site background */
+  
+  /* Replace with your exact page background color code */
+  background-color: #FDF2E6; 
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,20 +74,21 @@ body.cursor-hover #cursor-ring { width: 50px; height: 50px; opacity: 0.3; }
   transition: opacity 0.5s ease, visibility 0.5s;
 }
 
-.loader-content {
-  text-align: center;
-}
-
 .loader-gif {
-  width: 250px; /* Adjust size as needed */
+  width: 320px; /* Size remains proper */
   height: auto;
-  /* Optional: adds a soft fade-in effect for the logo itself */
+  
+  /* ❌ Remove mix-blend-mode as it's not needed for transparent GIF */
+  /* mix-blend-mode: multiply; */ 
+  
+  /* Optional: keeps the logo crisp */
+  filter: brightness(105%) contrast(110%);
   animation: logoFade 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes logoFade {
-  from { opacity: 0.8; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
+  from { opacity: 0.8; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1.05); }
 }
 
 /* Class to hide loader (triggered by your script.js) */
@@ -115,7 +119,7 @@ nav.scrolled {
   box-shadow: 0 1px 30px rgba(75,46,43,0.07);
 }
 
-/* Logo container */
+ 
 
 /* Logo container */
 .nav-logo {
@@ -271,13 +275,32 @@ nav.scrolled {
 /* ── Sections shared ── */
 section { padding: 110px 7%; }
 .section-eyebrow {
-  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent); font-weight: 400; margin-bottom: 12px;
-  display: flex; align-items: center; gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent); /* This keeps 'Me' in the accent gold/brown color */
+  font-weight: 300;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
-.section-eyebrow::before {
-  content: ''; width: 28px; height: 1px; background: var(--accent);
+/* ── Mobile Screens ke liye ── */
+@media (max-width: 768px) {
+  .section-eyebrow {
+    font-size: 2rem; /* Mobile par font chota ho jayega */
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
 }
+
+
+/* This specifically targets the word 'About' */
+.section-eyebrow span {
+  color: var(--primary); /* This makes 'About' your primary dark color */
+  margin-right: 8px;    /* Adds a little space before 'Me' */
+}
+ 
 .section-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.2rem, 5vw, 3.8rem);
@@ -293,6 +316,22 @@ section { padding: 110px 7%; }
 }
 .about-visual {
   position: relative;
+}
+/* Sirf About section ki heading ke liye alag class */
+.about-custom-heading {
+    font-size: 2rem !important; /* Is value ko aap mazeed chota ya bara kar sakti hain */
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Ye purani class ko mat cheraein, taake baaki sections theek rahein */
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 300; 
+    color: var(--primary); 
+    line-height: 1.1;
 }
 .about-img-wrap {
   position: relative; 
@@ -465,7 +504,102 @@ section { padding: 110px 7%; }
   transition: gap 0.3s ease;
 }
 .project-card:hover .project-arrow { gap: 12px; }
+ 
+/* ── Certifications ── */
 
+#certifications{
+  background: var(--bg);
+}
+
+.cert-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 28px;
+  margin-top: 64px;
+}
+
+.cert-card {
+  /* Change this to a transparent rgba color or transparent */
+  background: rgba(255, 255, 255, 0.666); 
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cert-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(75,46,43,0.16);
+}
+
+.cert-thumb {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding to eliminate the inner white gap */
+  background: transparent; /* Ensures the container itself isn't white */
+  overflow: hidden;
+}
+
+.cert-thumb-inner{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--primary);
+  transition: transform 0.5s ease;
+}
+
+.cert-card:hover .cert-thumb-inner{
+  transform: scale(1.1);
+}
+
+.cert-body{
+  padding: 28px;
+}
+
+.cert-org{
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.cert-name{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.cert-desc{
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.cert-thumb{
+  height: 240px;
+  overflow: hidden;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Use 'cover' if you want the image to fill the card width */
+  display: block;
+}
+
+.cert-card:hover .cert-img{
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
 /* Modal */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 5000;
@@ -476,7 +610,7 @@ section { padding: 110px 7%; }
   transition: all 0.35s ease;
   padding: 20px;
 }
-.modal-overlay.open { opacity: 1; visibility: visible; }
+.modal-overlay.open{ opacity: 1; visibility: visible; }
 .modal-box {
   background: var(--bg);
   border-radius: 24px; padding: 48px;
@@ -954,4 +1088,76 @@ footer {
 .exp-button-container .btn-primary {
   padding: 12px 28px;
   font-size: 0.8rem;
+}
+
+.exp-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Base style for mobile nav - Hidden by default */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Keeps it off-screen to the right */
+  width: 100%;  /* Full screen width on mobile */
+  height: 100vh;
+  background-color: white; /* Match your site background */
+  z-index: 1000; /* Ensures it sits on top of everything */
+  transition: right 0.4s ease; /* This creates the sliding effect */
+  display: flex;
+  flex-direction: column;
+}
+
+/* The "Magic" class your JS will trigger */
+#mobile-nav.open {
+  right: 0; /* Slides into view */
+}
+
+.mobile-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+/* ── FINAL MOBILE NAV SOLUTION ── */
+
+@media (max-width: 900px) {
+  /* Jab menu open ho toh hamburger ko hide kar dein */
+  #mobile-nav.open ~ .hamburger, 
+  .hamburger.hide { 
+    display: none !important; 
+  }
+
+  .mobile-nav {
+    /* Iska z-index high rakhein taake ye sab ke oopar aaye */
+    z-index: 9999 !important;
+    display: flex;
+    position: fixed;
+    inset: 0;
+    /* pointer-events check karein */
+    pointer-events: none; 
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .mobile-nav.open {
+    pointer-events: all; /* Menu khulne par clicks enable karein */
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mobile-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10001; /* Ye menu ke bhi oopar hona chahiye */
+    color: var(--primary);
+    padding: 10px; /* Click area bada karne ke liye */
+  }
 }

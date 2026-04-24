@@ -12,8 +12,23 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body>
 
+<body>
+   
+<div id="mobile-nav" class="mobile-nav">
+<div id="mobile-close" class="mobile-close">&times;</div>
+  <button id="mobile-close" class="mobile-close"></button>
+    <nav class="mobile-links-container">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a> 
+    <a href="#certifications" class="mobile-link">Certifications</a> 
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  </div>
+</div>
+<!-- Loader-->
 <div id="loader">
   <div class="loader-content">
     <img src="images/izza portfolio loading page .gif" alt="Izza Loading" class="loader-gif">
@@ -37,7 +52,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#process">WorkFlow</a></li>
+    <li><a href="#Certifications">Certifications</a></li>
    <li><a href="#contact" class="nav-contact">Contact</a></li>
   </ul>
   <div class="hamburger" id="hamburger" role="button" aria-label="Menu">
@@ -45,16 +60,7 @@
   </div>
 </nav>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobile-nav">
-  <button class="mobile-close" id="mobile-close">✕</button>
-  <a href="#about" class="mobile-link">About</a>
-  <a href="#skills" class="mobile-link">Skills</a>
-  <a href="#projects" class="mobile-link">Projects</a>
-  <a href="#experience" class="mobile-link">Experience</a>
-  <a href="#process" class="mobile-link">Process</a>
-  <a href="#contact" class="mobile-link">Contact</a>
-</div>
+
 
 <!-- Hero -->
 <section id="hero">
@@ -77,8 +83,8 @@
 
 <!-- About -->
 <section id="about">
-  <div class="section-eyebrow">About Me</div>
-  <h2 class="section-title">Passionate about <em>quality</em><br>in every build</h2>
+  <div class="section-eyebrow"><span>About</span> Me</div>
+   
   <div class="about-grid">
     <div class="about-visual reveal-left">
       <div class="about-img-decor"></div>
@@ -90,6 +96,7 @@
       </div>
       <div class="about-blob"></div>
       <div class="about-stats">
+        
         <div class="stat-card">
           <div class="stat-num">50+</div>
           <div class="stat-label">Test Cases Written</div>
@@ -108,9 +115,12 @@
         </div>
       </div>
     </div>
-    <div class="about-content reveal-right">
+    
+     
+      <div class="about-content reveal-right">
+    <h2 class="section-title about-custom-heading">Passionate about quality in every build</h2>
       <p>I am a <strong>detail-oriented Software Quality Assurance Engineer</strong> with a strong passion for ensuring software products meet the highest standards of reliability, functionality, and user experience.</p>
-      <p>My approach to QA goes beyond simply finding bugs — I believe in building <strong>robust testing strategies</strong> from the ground up, collaborating closely with development teams, and advocating for quality at every stage of the software development lifecycle.</p>
+      <p>My approach to QA goes beyond simply finding bugs. I believe in building <strong>robust testing strategies</strong> from the ground up, collaborating closely with development teams, and advocating for quality at every stage of the software development lifecycle.</p>
       <p>With expertise in both <strong>manual testing methodologies</strong> and exposure to basic automation tools, I bring a comprehensive perspective to quality engineering.</p>
       <ul class="trait-list">
         <li><span class="trait-dot"></span>Analytical thinker with a structured approach to problem-solving</li>
@@ -261,7 +271,7 @@
   </div>
 </div>
 
-<!-- Experience -->
+<!--Experience  -->
 <section id="experience">
  
   <h2 class="section-title reveal">Professional <em>journey</em></h2>
@@ -301,16 +311,67 @@
       </div>
       </div>
 </div>
-  <div class="exp-footer reveal">
-    <a href="c:\Users\artef\OneDrive\Desktop\IzzaShahbazResuume.pdf" download class="btn-primary">
+  
+    </div>
+    <div class="exp-footer reveal">
+    <a href="pdf/IzzaShahbazResuume.pdf" download class="btn-primary">
       <i class="fas fa-download" style="align-items: center;"></i>Download CV
     </a>
      </div>
-    </div>
-
   </div>
 </section>
 
+<!--Certifications-->
+<section id="certifications">
+
+  <h2 class="section-title reveal">Professional <em>Certifications</em></h2>
+
+  
+    <div class="cert-grid">
+
+<div class="cert-card reveal" style="transition-delay:0.1s">
+  <div class="cert-thumb">
+      <img src="images/uet certificate.jpeg" alt="AI Certificate" class="cert-img">
+  </div>
+  <div class="cert-body">
+      <div class="cert-org">University of Engineering & Technology</div>
+      <div class="cert-name">Artificial Intelligence </div>
+  </div>
+</div>
+
+<div class="cert-card reveal" style="transition-delay:0.2s">
+  <div class="cert-thumb">
+      <img src="images/digicon valley certification.jpeg" alt="QA Certificate" class="cert-img">
+  </div>
+  <div class="cert-body">
+      <div class="cert-org">Digicon Valley</div>
+      <div class="cert-name">Data Science</div>
+  </div>
+</div>
+
+<div class="cert-card reveal" style="transition-delay:0.3s">
+  <div class="cert-thumb">
+      <img src="images/Agile Certficate.jpeg" alt="Manual Testing Certificate" class="cert-img">
+  </div>
+  <div class="cert-body">
+      <div class="cert-org">HPLive</div>
+      <div class="cert-name">Agile Methodolgies</div>
+  </div>
+</div>
+
+<div class="cert-card reveal" style="transition-delay:0.3s">
+  <div class="cert-thumb">
+      <img src="images/IT bussiness Certificate.jpeg" alt="Manual Testing Certificate" class="cert-img">
+  </div>
+  <div class="cert-body">
+      <div class="cert-org">HPLive</div>
+      <div class="cert-name">IT For Bussiness Success</div>
+  </div>
+</div>
+
+
+</div>
+</section>
 <!-- QA Process -->
 <section id="process">
  

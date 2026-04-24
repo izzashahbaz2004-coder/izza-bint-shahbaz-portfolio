@@ -57,18 +57,28 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── Mobile nav ── */
-const hamburger = document.getElementById('hamburger');
-const mobileClose = document.getElementById('mobile-close');
-const mobileNav = document.getElementById('mobile-nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileClose = document.getElementById('mobile-close');
 
-if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
-}
-if (mobileClose && mobileNav) {
-    mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
-}
-document.querySelectorAll('.mobile-link').forEach(l => {
-    l.addEventListener('click', () => mobileNav.classList.remove('open'));
+    // Menu Open karne ke liye
+    hamburger.addEventListener('click', () => {
+        mobileNav.classList.add('open');
+    });
+
+    // Menu Close karne ke liye
+    mobileClose.addEventListener('click', (e) => {
+        e.stopPropagation(); // Click event ko piche jane se rokta hai
+        mobileNav.classList.remove('open');
+    });
+
+    // Links par click karne se menu band ho jaye
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+        });
+    });
 });
 
 /* ── Scroll reveal ── */
@@ -292,4 +302,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
     });
 });
-
+// Mobile links par click karne se menu band karne ke liye
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileNav.classList.remove('open'); // Aapki 'open' class ka naam yahan ayega
+    });
+});
